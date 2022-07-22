@@ -6,7 +6,7 @@ const iframe = document.querySelector('#vimeo-player');
 const player = new Player(iframe);
 
 let currentTime = 0
-LOCALSTOREG_TIME = "videoplayer-current-time"
+const LOCALSTOREG_TIME = "videoplayer-current-time"
 
 function getTime({seconds}) {
     console.log('played the video!')
