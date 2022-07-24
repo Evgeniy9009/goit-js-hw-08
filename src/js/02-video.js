@@ -15,11 +15,14 @@ function getTime({seconds}) {
     currentTime = localStorage.getItem(LOCALSTOREG_TIME)
     console.log(currentTime)
 }
-    
+
 player.on('timeupdate', throttle(getTime, 1000));
 
-player.setCurrentTime(localStorage.getItem(LOCALSTOREG_TIME))
+const savedTime = localStorage.getItem(LOCALSTOREG_TIME)
 
+if (savedTime) {
+    player.setCurrentTime(savedTime)
+}
 
 
 
